@@ -1,6 +1,11 @@
 # API·프론트엔드 연동
 
-기본 주소는 로컬 `http://localhost:8080`입니다. 모든 JSON은 UTF-8입니다. UUID는 서버 응답값을 사용합니다. DB 조회 응답 열 이름은 `snake_case`, 요청 DTO와 가공 응답은 아래의 `camelCase`입니다. 날짜는 ISO-8601 오프셋 포함 시각입니다. 예시 ID와 데이터는 설명용입니다.
+- 기본 주소: `http://localhost:8080`
+- 모든 JSON은 UTF-8
+- UUID는 server 응답값을 사용
+- DB 조회 응답 column 이름은 `snake_case`, 요청 DTO와 가공 응답은 아래의 `camelCase`
+- 날짜는 ISO-8601 오프셋 포함 시각
+- 예시 ID와 데이터는 설명용
 
 공개 백엔드 주소는 아직 발급·배포되지 않았습니다. 위 localhost 주소는 각 개발자가 백엔드를 직접 실행했을 때 사용하는 주소입니다. 프론트팀 전달용 요약은 [FRONTEND_HANDOFF.md](FRONTEND_HANDOFF.md)에 있습니다.
 
