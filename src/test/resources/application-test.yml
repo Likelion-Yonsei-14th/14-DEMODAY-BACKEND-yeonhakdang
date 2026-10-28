@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:yhd;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=10000
+    username: sa
+    password: ''
+  session:
+    jdbc:
+      initialize-schema: never
+app:
+  sales-enabled: true
+  portone:
+    store-id: store-test
+    webhook-secret: whsec_dGVzdC1zZWNyZXQ=
+    card-channel: channel-test

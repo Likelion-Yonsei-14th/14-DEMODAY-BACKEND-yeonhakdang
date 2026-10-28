@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: yeonhakdang
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/yeonhakdang}
+    username: ${DB_USER:yeonhakdang}
+    password: ${DB_PASSWORD:local-development-only}
+    hikari:
+      maximum-pool-size: 10
+  session:
+    jdbc:
+      initialize-schema: never
+    timeout: 12h
+  flyway:
+    enabled: true
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+  servlet:
+    session:
+      cookie:
+        name: YHDSESSION
+        http-only: true
+        secure: ${COOKIE_SECURE:true}
+        same-site: ${COOKIE_SAME_SITE:lax}
+  tomcat:
+    max-http-form-post-size: 64KB
+  error:
+    include-message: never
+    include-stacktrace: never
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+app:
+  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:3000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:https://yeonhakdang.vercel.app,http://localhost:3000}
+  oauth-enabled: ${KAKAO_ENABLED:false}
+  policy-version: ${POLICY_VERSION:2026-10-29-draft}
+  sales-enabled: ${SALES_ENABLED:false}
+  portone:
+    secret: ${PORTONE_API_SECRET:}
+    webhook-secret: ${PORTONE_WEBHOOK_SECRET:}
+    store-id: ${PORTONE_STORE_ID:}
+    card-channel: ${PORTONE_CARD_CHANNEL:}
+    kakao-channel: ${PORTONE_KAKAO_CHANNEL:}
+    toss-channel: ${PORTONE_TOSS_CHANNEL:}
+logging:
+  level:
+    org.springframework.web: WARN
+    org.springframework.security: WARN

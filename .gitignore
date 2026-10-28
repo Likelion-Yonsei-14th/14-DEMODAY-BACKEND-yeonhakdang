@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Java / Spring local outputs and secrets
+.gradle/
+build/
+out/
+.env
+.env.*
+!.env.example
+*.log
+!gradle/wrapper/gradle-wrapper.jar
